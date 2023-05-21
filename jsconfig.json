@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "~stitches": ["stitches.config.js"],
+      "@img/*": ["public/img/*"],
+      "@icons": ["icons"],
+    }
+  }
+}

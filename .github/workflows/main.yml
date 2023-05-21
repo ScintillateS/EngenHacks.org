@@ -1,0 +1,48 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Next.js Build and Push to Main
+
+on:
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(export TZ=America/Toronto; date)"
+    - name: Configure git
+      env:
+        TOKEN: ${{ secrets.MAIN_TOKEN }}
+        EMAIL: ${{ secrets.MAIN_EMAIL }}
+      run: git config --global url."https://${TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+    - run: git config --global user.email "${EMAIL}"
+    - run: git config --global user.name "GitHub Actions Automation"
+    - uses: actions/checkout@v2
+    - run: echo "GURL=$(git remote get-url origin)">>$GITHUB_ENV
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: npm run export --if-present
+    - run: |
+        #Pushing the developed code onto the main repo
+        cd out
+        git init 
+        git add .
+        git commit -m "🔨 ${{ github.event.repository.name }} build | ${{ steps.date.outputs.date }} 🔨"
+        git remote add origin $GURL
+        git checkout gh_pages
+        git push --force --set-upstream origin gh_pages
