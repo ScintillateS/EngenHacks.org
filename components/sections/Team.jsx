@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { styled, css } from '~stitches';
-import { teamMembers } from './teamData';
+import teamData from './teamData';
+
 import { Header } from '../atoms';
 
 const Wrapper = styled('section', {

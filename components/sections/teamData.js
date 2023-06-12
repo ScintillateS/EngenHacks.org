@@ -1,4 +1,4 @@
-const teamMembers = [
+const teamData = [
   {
     id: 1,
     name: "John Doe",
@@ -24,7 +24,6 @@ const teamMembers = [
     experience: "4 years",
   },
 
-  
 ];
 
-export default teamMembers;
+export default teamData;
