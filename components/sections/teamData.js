@@ -1,4 +1,4 @@
-import Musa from './teamPics';
+import Musa from '../../public/img/teamPics/Musa.jpg';
 
 const teamData = [
   {
@@ -25,7 +25,6 @@ const teamData = [
     year: "Senior",
     experience: "4 years",
   },
-
 ];
 
 export default teamData;
