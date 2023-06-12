@@ -6,6 +6,8 @@ import { Hero, About, Sponsors } from '@components/sections';
 import FAQ from '@components/sections/FAQ/FAQ';
 import { BrowserView } from 'react-device-detect';
 import Stats from '@components/sections/Stats';
+import { Team } from '@components/sections';
+
 
 
 export default function Home() {
@@ -53,6 +55,7 @@ export default function Home() {
         <Layout>
             <Hero />
             <About />
+            <Team />
             {/* <Stats /> */}
             <Sponsors />
             <FAQ/>
