@@ -1,4 +1,4 @@
-import Musa from '../../public/img/teamPics/Musa.jpg';
+import Musa from '../../public/img/teamPics/musa-aqeel.jpg';
 
 const teamData = [
   {
