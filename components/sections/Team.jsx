@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { styled, css } from '~stitches';
 import { teamMembers } from './teamData';
+import { Header } from "@components/atoms";
+
 
 const Wrapper = styled('section', {
   minHeight: '100vh',
