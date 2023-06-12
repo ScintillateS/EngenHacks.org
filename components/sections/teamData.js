@@ -8,6 +8,7 @@ const teamData = [
     image: Musa,
     year: "Senior",
     experience: "3 years",
+    link: "https://musaaqeel.com/",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const teamData = [
     image: "/team/jane-smith.jpg",
     year: "Junior",
     experience: "2 years",
+    link: "https://smith.com/",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const teamData = [
     image: "/team/mike-johnson.jpg",
     year: "Senior",
     experience: "4 years",
+    link: "https://mike.com/",
   },
 ];
 

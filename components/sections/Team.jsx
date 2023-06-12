@@ -68,20 +68,30 @@ const LearnMoreButton = styled('a', {
     textDecoration: 'none !important',
     transition: 'color 0.2s ease-out, text-decoration 0.2s ease-out',
   },
+
+  
 });
 
 
-const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
+
+
+const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
   return (
     <TeamMemberContainer>
       <TeamMemberImage>
         <Image src={img} alt={name} width={200} height={200} />
       </TeamMemberImage>
-      <h3>{name}</h3>
+      <h3>
+        <a href={link} className="team-member-link">
+          {name}
+        </a>
+      </h3>
       <p>{role}</p>
+      <LearnMoreButton href="#">Learn More</LearnMoreButton>
     </TeamMemberContainer>
   );
 };
+
 
 const Team = () => {
   return (
