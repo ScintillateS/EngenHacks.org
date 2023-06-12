@@ -47,11 +47,13 @@ const LogoDiv = styled("div", ({
   maxWidth: '130px',
   maxHeight: '130px',
   minWidth: '80px',
-  minHeight: '8z0px',
+  minHeight: '80px',
   width: "20%",
   left: '10%',
   top: '0px',
+  transform: 'translateX(-50%)', //
 }));
+
 
 const HamburgerWrapper = styled("div", ({
   position: 'absolute',
