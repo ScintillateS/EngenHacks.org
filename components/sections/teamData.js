@@ -1,16 +1,16 @@
 const teamData = [
   {
     id: 1,
-    name: "John Doe",
-    role: "Software Engineer",
-    image: "/team/john-doe.jpg",
+    name: "Musa Aqeel",
+    role: "CTO",
+    image: "/team/musa-aqeel.jpg",
     year: "Senior",
     experience: "3 years",
   },
   {
     id: 2,
     name: "Jane Smith",
-    role: "UI/UX Designer",
+    role: "Tech Lead",
     image: "/team/jane-smith.jpg",
     year: "Junior",
     experience: "2 years",
