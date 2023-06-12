@@ -1,3 +1,5 @@
+import Musa from "../../public/teamPics/musa-aqeel.jpg";
+
 const teamData = [
   {
     id: 1,
