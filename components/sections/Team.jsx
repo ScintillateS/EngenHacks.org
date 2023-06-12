@@ -55,7 +55,7 @@ const LearnMoreButton = styled('a', {
   padding: '10px 20px',
   textDecoration: 'none !important',
   cursor: 'pointer',
-  border: '3.5px solid var(--blue)',
+  border: '3.50px solid var(--blue)',
   borderRadius: '14px',
   transition: 'border-color 0.2s ease-out, color 0.2s ease-out',
   color: 'var(--slate)',
@@ -68,9 +68,8 @@ const LearnMoreButton = styled('a', {
     textDecoration: 'none !important',
     transition: 'color 0.2s ease-out, text-decoration 0.2s ease-out',
   },
-
-  
 });
+
 
 
 
