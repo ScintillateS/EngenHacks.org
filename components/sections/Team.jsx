@@ -58,7 +58,8 @@ const LearnMoreButton = styled('a', {
   border: '3.5px solid var(--blue)',
   borderRadius: '14px',
   transition: 'border-color 0.2s ease-out, color 0.2s ease-out',
-  color: 'var(--white)',
+  color: 'var(--slate)',
+  marginTop: '10px',
   '& img': {
     height: '18px',
   },
@@ -68,6 +69,7 @@ const LearnMoreButton = styled('a', {
     transition: 'color 0.2s ease-out, text-decoration 0.2s ease-out',
   },
 });
+
 
 const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
   return (
