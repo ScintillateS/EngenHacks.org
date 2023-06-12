@@ -23,7 +23,7 @@ const FAQs = styled('section', css({
     minWidth: "100%",
     padding: "5rem 0",
     margin: "0",
-    borderRadius: "10px",
+    borderRadius: "0px", // square rn
 }));
 
 const FAQ = (props) => {
