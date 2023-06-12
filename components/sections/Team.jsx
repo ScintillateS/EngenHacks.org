@@ -76,14 +76,11 @@ const Team = () => {
     <div>
       <h2>Our Team</h2>
       <div className="team-members">
-        {teamMembers.map((member) => (
-          <div key={member.id} className="team-member">
-            <img src={member.image} alt={member.name} />
+        {teamData.map((member) => (
+          <div key={member.id} className="member">
+            <Image src={member.image} alt={member.name} width={150} height={150} />
             <h3>{member.name}</h3>
             <p>{member.role}</p>
-            <button onClick={() => console.log("Learn more", member)}>Learn More</button>
-            <p>High School Year: {member.year}</p>
-            <p>Experience: {member.experience}</p>
           </div>
         ))}
       </div>
