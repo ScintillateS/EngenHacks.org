@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { styled, css } from '~stitches';
 import { teamMembers } from './teamData';
@@ -24,13 +24,51 @@ const TeamGrid = styled('div', css({
   padding: '50px',
 }));
 
-const TeamMember = ({ name, role, img }) => (
-  <div>
-    <Image src={img} alt={name} width={200} height={200} />
-    <h3>{name}</h3>
-    <p>{role}</p>
-  </div>
-);
+const TeamMemberContainer = styled('div', {
+  position: 'relative',
+});
+
+const TeamMemberImage = styled('div', {
+  position: 'relative',
+  cursor: 'pointer',
+});
+
+const Popup = styled('div', {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  background: '#fff',
+  boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.25)',
+  borderRadius: '10px',
+  padding: '20px',
+  zIndex: '9999',
+});
+
+const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+  return (
+    <TeamMemberContainer>
+      <TeamMemberImage onClick={togglePopup}>
+        <Image src={img} alt={name} width={200} height={200} />
+      </TeamMemberImage>
+      <h3>{name}</h3>
+      <p>{role}</p>
+      {showPopup && (
+        <Popup>
+          <h4>High School Year: {highSchoolYear}</h4>
+          <p>Experience: {experience}</p>
+          {/* Additional information about the team member */}
+        </Popup>
+      )}
+    </TeamMemberContainer>
+  );
+};
 
 const Team = () => {
   return (
@@ -43,6 +81,8 @@ const Team = () => {
             name={member.name}
             role={member.role}
             img={member.img}
+            highSchoolYear={member.highSchoolYear}
+            experience={member.experience}
           />
         ))}
       </TeamGrid>
