@@ -17,7 +17,12 @@ const TeamGrid = styled('div', css({
   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gap: '2.5rem',
   maxWidth: '1142px',
+  background: 'linear-gradient(101.99deg, rgba(249, 249, 249, 0.5) 5.49%, rgba(249, 249, 249, 0.3) 100%)',
+  boxSizing: 'border-box',
+  boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.25)',
+  backdropFilter: 'blur(20px)',
   margin: '0 auto',
+  borderRadius: '10px',
   padding: '50px',
 }));
 
@@ -26,24 +31,9 @@ const TeamMemberContainer = styled('div', {
   marginBottom: '2rem',
 });
 
-const RoundedSquare = styled('div', {
+const TeamMemberImage = styled('div', {
   position: 'relative',
-  width: '200px',
-  height: '200px',
-  borderRadius: '20px',
-  background: '#fff',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  overflow: 'hidden',
-});
-
-const TeamMemberImage = styled(RoundedSquare, {
   cursor: 'pointer',
-});
-
-const CircularImage = styled(Image, {
-  borderRadius: '50%',
 });
 
 const Popup = styled('div', {
@@ -68,7 +58,7 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
   return (
     <TeamMemberContainer>
       <TeamMemberImage onClick={togglePopup}>
-        <CircularImage src={img} alt={name} width={180} height={180} objectFit="cover" />
+        <Image src={img} alt={name} width={200} height={200} />
       </TeamMemberImage>
       <h3>{name}</h3>
       <p>{role}</p>
