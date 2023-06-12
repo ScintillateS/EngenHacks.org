@@ -47,6 +47,28 @@ const TeamMemberImage = styled('div', {
   }
 });
 
+const LearnMoreButton = styled('a', {
+  animation: 'pulse 1s infinite',
+  fontSize: '22px',
+  fontWeight: 'bolder',
+  fontFamily: '"NTR"',
+  padding: '10px 20px',
+  textDecoration: 'none !important',
+  cursor: 'pointer',
+  border: '3.5px solid var(--blue)',
+  borderRadius: '14px',
+  transition: 'border-color 0.2s ease-out, color 0.2s ease-out',
+  color: 'var(--white)',
+  '& img': {
+    height: '18px',
+  },
+  '&:hover': {
+    color: 'var(--blue) !important',
+    textDecoration: 'none !important',
+    transition: 'color 0.2s ease-out, text-decoration 0.2s ease-out',
+  },
+});
+
 const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
   return (
     <TeamMemberContainer>
@@ -55,9 +77,11 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
       </TeamMemberImage>
       <h3>{name}</h3>
       <p>{role}</p>
+      <LearnMoreButton href="#">Learn More</LearnMoreButton>
     </TeamMemberContainer>
   );
 };
+
 
 const Team = () => {
   return (
