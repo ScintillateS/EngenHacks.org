@@ -74,24 +74,20 @@ const LearnMoreButton = styled('a', {
 
 
 
-
 const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
   return (
     <TeamMemberContainer>
       <TeamMemberImage>
         <Image src={img} alt={name} width={200} height={200} />
       </TeamMemberImage>
-      <h3>
-        <a href={link} className="team-member-link">
-          {name}
-        </a>
-      </h3>
+      <h3>{name}</h3>
       <p>{role}</p>
-      <LearnMoreButton href="#">Learn More</LearnMoreButton>
+      <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
+        Learn More
+      </LearnMoreButton>
     </TeamMemberContainer>
   );
 };
-
 
 const Team = () => {
   return (
@@ -104,9 +100,9 @@ const Team = () => {
             name={member.name}
             role={member.role}
             img={member.image}
-            
             highSchoolYear={member.highSchoolYear}
             experience={member.experience}
+            link={member.link} // Pass the "link" property to the TeamMember component
           />
         ))}
       </TeamGrid>
