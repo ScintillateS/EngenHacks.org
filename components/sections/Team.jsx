@@ -83,7 +83,6 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
       <p>{role}</p>
       <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
         Learn More
-        <img src="/path-to-your-image.png" alt="Learn More" />
       </LearnMoreButton>
     </TeamMemberContainer>
   );
