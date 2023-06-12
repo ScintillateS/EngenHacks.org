@@ -79,7 +79,6 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
       </TeamMemberImage>
       <h3>{name}</h3>
       <p>{role}</p>
-      <LearnMoreButton href="#">Learn More</LearnMoreButton>
     </TeamMemberContainer>
   );
 };
@@ -95,6 +94,7 @@ const Team = () => {
             name={member.name}
             role={member.role}
             img={member.image}
+            
             highSchoolYear={member.highSchoolYear}
             experience={member.experience}
           />
