@@ -5,7 +5,7 @@ const teamData = [
     id: 1,
     name: "Musa Aqeel",
     role: "CTO",
-    image: "/team/musa-aqeel.jpg",
+    image: Musa,
     year: "Senior",
     experience: "3 years",
   },
