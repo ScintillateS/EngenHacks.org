@@ -72,21 +72,21 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
 
 const Team = () => {
   return (
-    <Wrapper id="Team">
-      <Header align="center">Meet the Team</Header>
-      <TeamGrid>
-        {teamMembers.map((member, index) => (
-          <TeamMember
-            key={index}
-            name={member.name}
-            role={member.role}
-            img={member.img}
-            highSchoolYear={member.highSchoolYear}
-            experience={member.experience}
-          />
+    <div>
+      <h2>Our Team</h2>
+      <div className="team-members">
+        {teamMembers.map((member) => (
+          <div key={member.id} className="team-member">
+            <img src={member.image} alt={member.name} />
+            <h3>{member.name}</h3>
+            <p>{member.role}</p>
+            <button onClick={() => console.log("Learn more", member)}>Learn More</button>
+            <p>High School Year: {member.year}</p>
+            <p>Experience: {member.experience}</p>
+          </div>
         ))}
-      </TeamGrid>
-    </Wrapper>
+      </div>
+    </div>
   );
 };
 
