@@ -3,9 +3,12 @@ import Image from 'next/image';
 import { styled, css } from '~stitches';
 import teamData from './teamData';
 
+import { Header } from '../atoms';
+
 const Wrapper = styled('section', {
   minHeight: '100vh',
   width: '100%',
+  textAlign: 'center',
   scrollMarginTop: '12vh',
 });
 
