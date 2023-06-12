@@ -1,13 +1,30 @@
-export const teamMembers = [
+const teamData = [
   {
-    name: 'John Doe',
-    role: 'Developer',
-    img: '/john-doe.jpg',
+    id: 1,
+    name: "John Doe",
+    role: "Software Engineer",
+    image: "/team/john-doe.jpg",
+    year: "Senior",
+    experience: "3 years",
   },
   {
-    name: 'Jane Smith',
-    role: 'Designer',
-    img: '/jane-smith.jpg',
+    id: 2,
+    name: "Jane Smith",
+    role: "UI/UX Designer",
+    image: "/team/jane-smith.jpg",
+    year: "Junior",
+    experience: "2 years",
   },
-  // Add more team members as needed
+  {
+    id: 3,
+    name: "Mike Johnson",
+    role: "Data Scientist",
+    image: "/team/mike-johnson.jpg",
+    year: "Senior",
+    experience: "4 years",
+  },
+
+  
 ];
+
+export default teamData;
