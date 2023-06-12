@@ -34,6 +34,17 @@ const TeamMemberContainer = styled('div', {
 const TeamMemberImage = styled('div', {
   position: 'relative',
   cursor: 'pointer',
+    marginLeft: "auto",
+  marginRight: "auto",
+  transition: "0.2s all",
+  "& img": {
+    boxShadow: "0px 8px 24px 2px rgba(0, 0, 0, 0.25)",
+    borderRadius: "10px",
+  },
+  "&:hover": {
+    transform: "scale(1.05)",
+    transition: "0.2s all",
+  }
 });
 
 const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
