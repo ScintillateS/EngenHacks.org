@@ -81,6 +81,7 @@ export const Navbar = (props) => {
         <Links id="links">
           <Link href="#About" target="_self">About</Link>
           <Link href="#Sponsors" target="_self">Sponsors</Link>
+          <Link href="#Team" target="_blank">Team</Link>
           <Link href="#FAQ" target="_self">FAQ</Link>
         </Links>
       </BrowserView>
@@ -91,7 +92,9 @@ export const Navbar = (props) => {
         <LinksMobile id='mobile-links'>
           <Link href="#About" target="_self">About</Link>
           <Link href="#Sponsors" target="_self">Sponsors</Link>
+          <Link href="#Team" target="_blank">Team</Link>
           <Link href="#FAQ" target="_self">FAQ</Link>
+
         </LinksMobile>
       </MobileView>
     </Wrapper>
