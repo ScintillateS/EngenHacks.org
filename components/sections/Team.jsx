@@ -9,6 +9,9 @@ const Wrapper = styled('section', {
   minHeight: '100vh',
   width: '100%',
   scrollMarginTop: '12vh',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const TeamGrid = styled('div', css({
@@ -73,18 +76,21 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience }) => {
 
 const Team = () => {
   return (
-    <div>
+    <Wrapper>
       <h2>Our Team</h2>
-      <div className="team-members">
+      <TeamGrid>
         {teamData.map((member) => (
-          <div key={member.id} className="member">
-            <Image src={member.image} alt={member.name} width={150} height={150} />
-            <h3>{member.name}</h3>
-            <p>{member.role}</p>
-          </div>
+          <TeamMember
+            key={member.id}
+            name={member.name}
+            role={member.role}
+            img={member.image}
+            highSchoolYear={member.year}
+            experience={member.experience}
+          />
         ))}
-      </div>
-    </div>
+      </TeamGrid>
+    </Wrapper>
   );
 };
 
