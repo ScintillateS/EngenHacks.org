@@ -6,7 +6,8 @@ import { Hero, About, Sponsors } from '@components/sections';
 import FAQ from '@components/sections/FAQ/FAQ';
 import { BrowserView } from 'react-device-detect';
 import Stats from '@components/sections/Stats';
-import { Team } from '@components/sections';
+import Team from '@components/sections/Team';
+
 
 
 

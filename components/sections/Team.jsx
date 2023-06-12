@@ -2,8 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { styled, css } from '~stitches';
 import { teamMembers } from './teamData';
-import { Header } from "@components/atoms";
-
+import { Header } from '../atoms';
 
 const Wrapper = styled('section', {
   minHeight: '100vh',
@@ -25,7 +24,6 @@ const TeamGrid = styled('div', css({
   padding: '50px',
 }));
 
-
 const TeamMember = ({ name, role, img }) => (
   <div>
     <Image src={img} alt={name} width={200} height={200} />
@@ -33,7 +31,6 @@ const TeamMember = ({ name, role, img }) => (
     <p>{role}</p>
   </div>
 );
-
 
 const Team = () => {
   return (
