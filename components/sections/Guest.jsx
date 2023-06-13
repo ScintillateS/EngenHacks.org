@@ -97,7 +97,7 @@ const Guest = () => {
     <Wrapper>
       <h2>Our Guest</h2>
       <GuestGrid>
-        {GuestData.map((member) => (
+        {guestData.map((member) => (
           <GuestMember
             key={member.id}
             name={member.name}
