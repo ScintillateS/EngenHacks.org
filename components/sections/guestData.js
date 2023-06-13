@@ -1,6 +1,6 @@
 // import Musa from '../../public/img/GuestPics/musa-aqeel.jpg';
 
-const GuestData = [
+const guestData = [
   {
     id: 1,
     name: "Guest 1",
@@ -30,4 +30,4 @@ const GuestData = [
   },
 ];
 
-export default GuestData;
+export default guestData;
