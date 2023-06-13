@@ -1,6 +1,6 @@
 import Musa from '../../public/img/teamPics/musa-aqeel.jpg';
-import Rohit from '../../public/img/teamPics/Rohit-Naidu.jpg';
-import Varun from '../../public/img/teamPics/Varun-Venkatesh.jpg';
+import Rohit from '../../public/img/teamPics/Rohit-Naidu.png';
+import Varun from '../../public/img/teamPics/Varun-Venkatesh.png';
 
 const teamData = [
   {
