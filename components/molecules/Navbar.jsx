@@ -9,7 +9,7 @@ const Wrapper = styled("navbar", css({
   position: "fixed",
   width: "100%",
   boxSizing: "border-box",
-  height: "80px",
+  minHeight: "80px", // Change the height to minHeight
   background: "rgb(13, 13, 13)",
   zIndex: "10",
   borderBottom: '1px solid',
@@ -31,7 +31,7 @@ const Links = styled("div", css({
   top: "28px",
 }));
 
-const LinksMobile = styled("div", {
+const LinksMobile = styled("div", ({
   position: "absolute",
   alignItems: "center",
   justifyContent: "center",
@@ -39,8 +39,9 @@ const LinksMobile = styled("div", {
   width: "100%",
   display: "none",
   gap: "10px",
-  top: "80px", // Adjust the top position to provide space below the navbar
-});
+  top: "100px", // Adjust the top position to provide space below the navbar
+}));
+
 
 
 
