@@ -67,19 +67,20 @@ const HamburgerWrapper = styled("div", ({
 
 }));
 
-function changeNavBar(toggled) {
-  const navbar = document.getElementById("navbar");
-  const mobileLinks = document.getElementById("mobile-links");
-
-  if (toggled) {
-    navbar.style.height = `${navbar.scrollHeight}px`; // Set the height to the full scroll height
-    mobileLinks.style.display = 'flex';
-  } else {
-    navbar.style.height = '80px';
-    mobileLinks.style.display = 'none';
+export const Navbar = (props) => {
+  function changeNavBar(toggled) {
+    const navbar = document.getElementById("navbar");
+    const mobileLinks = document.getElementById("mobile-links");
+  
+    if (toggled) {
+      navbar.style.height = `${navbar.scrollHeight}px`; // Set the height to the full scroll height
+      mobileLinks.style.display = 'flex';
+    } else {
+      navbar.style.height = '80px';
+      mobileLinks.style.display = 'none';
+    }
   }
-}
-
+  
 
   return (
     <Wrapper id="navbar">
