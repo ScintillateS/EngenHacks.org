@@ -9,13 +9,14 @@ const Wrapper = styled("navbar", css({
   position: "fixed",
   width: "100%",
   boxSizing: "border-box",
-  height: "80px",
+  minHeight: "80px", // Change the height to minHeight
   background: "rgb(13, 13, 13)",
   zIndex: "10",
   borderBottom: '1px solid',
   borderImageSource: "white",
   borderImageSlice: 1,
 }));
+
 
 const Links = styled("div", css({
   display: "flex",
