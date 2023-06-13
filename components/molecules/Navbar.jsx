@@ -39,9 +39,10 @@ const LinksMobile = styled("div", ({
   width: "100%",
   display: "none",
   gap: "10px",
-  top: "80px",
-  padding: "10px",
-  boxSizing: "border-box",
+  top: "80px", // Adjust the top value to create more space for the menu options
+  padding: "10px", // Add some padding to prevent the options from getting too close to the edges
+  boxSizing: "border-box", // Include the padding in the overall width of the component
+  maxHeight: "calc(100vh - 80px)", // Set a maximum height for the menu to prevent overflow
 }));
 
 
