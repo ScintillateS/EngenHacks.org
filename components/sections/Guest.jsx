@@ -16,6 +16,7 @@ const GuestGrid = styled('div', css({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gap: '2.5rem',
+  background: 'linear-gradient(101.99deg, rgba(249, 249, 249, 0.5) 5.49%, rgba(249, 249, 249, 0.3) 100%)',
   maxWidth: '800px',
   boxSizing: 'border-box',
   boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.25)',
