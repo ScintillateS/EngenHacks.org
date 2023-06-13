@@ -10,16 +10,13 @@ const Wrapper = styled('section', {
   width: '100%',
   textAlign: 'center',
   scrollMarginTop: '12vh',
-  border: '1px solid white',
-  boxSizing: 'border-box',
 });
-
 
 const TeamGrid = styled('div', css({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gap: '2.5rem',
-  maxWidth: '1142px',
+  maxWidth: '800px',
   boxSizing: 'border-box',
   boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.25)',
   backdropFilter: 'blur(20px)',
