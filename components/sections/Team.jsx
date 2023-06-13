@@ -91,7 +91,7 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
 
 const Team = () => {
   return (
-    <Wrapper>
+    <Wrapper id="Team">
       <h2>Our Team</h2>
       <TeamGrid>
         {teamData.map((member) => (
