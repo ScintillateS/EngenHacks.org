@@ -30,6 +30,37 @@ const teamData = [
     experience: "4 years",
     link: "https://mike.com/",
   },
+
+  {
+    id: 4,
+    name: "Person 4",
+    role: "Event Organizer",
+    image: Musa,
+    year: "Senior",
+    experience: "3 years",
+    link: "https://person4.com/",
+  }
+
+  {
+    id: 5,
+    name: "Person 5",
+    role: "Event Organizer",
+    image: Musa,
+    year: "Senior",
+    experience: "3 years",
+    link: "https://person5.com/",
+  }
+
+  {
+    id: 6,
+    name: "Person 6",
+    role: "Event Organizer",
+    image: Musa,
+    year: "Senior",
+    experience: "3 years",
+    link: "https://person6.com/",
+  }
+  
 ];
 
 export default teamData;
