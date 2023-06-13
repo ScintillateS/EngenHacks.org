@@ -51,7 +51,7 @@ const LogoDiv = styled("div", ({
   width: "20%",
   left: '10%',
   top: '0px',
-  transform: 'translateX(-70%)', //
+  transform: 'translateX(-50%)', //
 }));
 
 

@@ -83,10 +83,14 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
       <p>{role}</p>
       <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
 
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {link}
+        </a>
       </LearnMoreButton>
     </TeamMemberContainer>
   );
 };
+
 
 const Team = () => {
   return (
