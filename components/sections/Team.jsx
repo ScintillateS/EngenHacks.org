@@ -83,9 +83,6 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
         </a>
       </h3>
       <p>{role}</p>
-      <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
-        Learn More
-      </LearnMoreButton>
     </TeamMemberContainer>
   );
 };
