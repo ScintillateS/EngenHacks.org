@@ -59,8 +59,8 @@ export default function Home() {
             <About />
             {/* <Stats /> */}
             <Sponsors />
-            <Team />
             <Guest />
+            <Team />
             <FAQ/>
         </Layout>
       </MainBackground>
