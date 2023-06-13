@@ -16,8 +16,7 @@ const GuestGrid = styled('div', css({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gap: '2.5rem',
-  maxWidth: '1142px',
-  background: 'linear-gradient(101.99deg, rgba(249, 249, 249, 0.5) 5.49%, rgba(249, 249, 249, 0.3) 100%)',
+  maxWidth: '800px',
   boxSizing: 'border-box',
   boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.25)',
   backdropFilter: 'blur(20px)',
@@ -70,32 +69,30 @@ const LearnMoreButton = styled('a', {
   },
 });
 
-
-
-
 const GuestMember = ({ name, role, img, highSchoolYear, experience, link }) => {
   return (
     <GuestMemberContainer>
       <GuestMemberImage>
-        <Image src={img} alt={name} width={200} height={200} />
-      </GuestMemberImage>
-      <h3>{name}</h3>
-      <p>{role}</p>
-      <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
-
         <a href={link} target="_blank" rel="noopener noreferrer">
-          {link}
+          <Image src={img} alt={name} width={200} height={200} />
         </a>
-      </LearnMoreButton>
+      </GuestMemberImage>
+      <h3 style={{ color: 'white' }}>
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+          {name}
+        </a>
+      </h3>
+      <p>{role}</p>
     </GuestMemberContainer>
   );
 };
 
 
+
 const Guest = () => {
   return (
     <Wrapper>
-      <h2>Our Guests!</h2>
+      <h2>Our Guest</h2>
       <GuestGrid>
         {guestData.map((member) => (
           <GuestMember
@@ -105,7 +102,7 @@ const Guest = () => {
             img={member.image}
             highSchoolYear={member.highSchoolYear}
             experience={member.experience}
-            link={member.link} // Pass the "link" property to the GuestMember component
+            link={member.link}
           />
         ))}
       </GuestGrid>
