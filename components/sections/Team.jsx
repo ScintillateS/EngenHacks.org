@@ -77,8 +77,8 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
           <Image src={img} alt={name} width={200} height={200} />
         </a>
       </TeamMemberImage>
-      <h3>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+      <h3 style={{ color: 'white' }}>
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
           {name}
         </a>
       </h3>
@@ -86,6 +86,7 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
     </TeamMemberContainer>
   );
 };
+
 
 
 const Team = () => {
