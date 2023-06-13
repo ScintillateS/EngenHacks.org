@@ -17,7 +17,6 @@ const TeamGrid = styled('div', css({
   gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
   gap: '2.5rem',
   maxWidth: '1142px',
-  // background: 'linear-gradient(101.99deg, rgba(249, 249, 249, 0.5) 5.49%, rgba(249, 249, 249, 0.3) 100%)',
   boxSizing: 'border-box',
   boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.25)',
   backdropFilter: 'blur(20px)',
@@ -70,27 +69,22 @@ const LearnMoreButton = styled('a', {
   },
 });
 
-
-
-
 const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
   return (
     <TeamMemberContainer>
       <TeamMemberImage>
-        <Image src={img} alt={name} width={200} height={200} />
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Image src={img} alt={name} width={200} height={200} />
+        </a>
       </TeamMemberImage>
       <h3>{name}</h3>
       <p>{role}</p>
       <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
-
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {link}
-        </a>
+        Learn More
       </LearnMoreButton>
     </TeamMemberContainer>
   );
 };
-
 
 const Team = () => {
   return (
@@ -105,7 +99,7 @@ const Team = () => {
             img={member.image}
             highSchoolYear={member.highSchoolYear}
             experience={member.experience}
-            link={member.link} // Pass the "link" property to the TeamMember component
+            link={member.link}
           />
         ))}
       </TeamGrid>
