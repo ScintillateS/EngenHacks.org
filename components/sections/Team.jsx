@@ -77,7 +77,11 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
           <Image src={img} alt={name} width={200} height={200} />
         </a>
       </TeamMemberImage>
-      <h3>{name}</h3>
+      <h3>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      </h3>
       <p>{role}</p>
       <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
         Learn More
@@ -85,6 +89,7 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
     </TeamMemberContainer>
   );
 };
+
 
 const Team = () => {
   return (
