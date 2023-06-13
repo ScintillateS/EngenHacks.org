@@ -10,7 +10,10 @@ const Wrapper = styled('section', {
   width: '100%',
   textAlign: 'center',
   scrollMarginTop: '12vh',
+  border: '1px solid white',
+  boxSizing: 'border-box',
 });
+
 
 const TeamGrid = styled('div', css({
   display: 'grid',
