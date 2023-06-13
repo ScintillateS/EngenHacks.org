@@ -9,14 +9,13 @@ const Wrapper = styled("navbar", css({
   position: "fixed",
   width: "100%",
   boxSizing: "border-box",
-  minHeight: "80px", // Change the height to minHeight
+  height: "80px",
   background: "rgb(13, 13, 13)",
   zIndex: "10",
   borderBottom: '1px solid',
   borderImageSource: "white",
   borderImageSlice: 1,
 }));
-
 
 const Links = styled("div", css({
   display: "flex",
@@ -44,6 +43,7 @@ const LinksMobile = styled("div", ({
   padding: "10px", // Add some padding to prevent the options from getting too close to the edges
   boxSizing: "border-box", // Include the padding in the overall width of the component
   maxHeight: "calc(100vh - 80px)", // Set a maximum height for the menu to prevent overflow
+
 }));
 
 
@@ -67,16 +67,19 @@ const HamburgerWrapper = styled("div", ({
 
 }));
 
-export const Navbar = (props) => {
-  function changeNavBar(toggled) {
-    if (toggled) {
-      document.getElementById("navbar").style.height = '180px';
-      document.getElementById("mobile-links").style.display = 'flex';
-    } else {
-      document.getElementById("navbar").style.height = '80px';
-      document.getElementById("mobile-links").style.display = 'none';
-    }
+function changeNavBar(toggled) {
+  const navbar = document.getElementById("navbar");
+  const mobileLinks = document.getElementById("mobile-links");
+
+  if (toggled) {
+    navbar.style.height = `${navbar.scrollHeight}px`; // Set the height to the full scroll height
+    mobileLinks.style.display = 'flex';
+  } else {
+    navbar.style.height = '80px';
+    mobileLinks.style.display = 'none';
   }
+}
+
 
   return (
     <Wrapper id="navbar">
