@@ -2,11 +2,12 @@
 import Engen from '@assets/Sponsors/engen-learning-no-bg.png';
 
 
+
 export const sponsors = {
   diamond: [
     {
       name: 'Engen Learning',
-      url: 'https://protocol.ai/',
+      url: 'https://www.engenlearning.org/',
       img: Engen,
     },
   ],
