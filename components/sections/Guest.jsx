@@ -95,7 +95,7 @@ const GuestMember = ({ name, role, img, highSchoolYear, experience, link }) => {
 const Guest = () => {
   return (
     <Wrapper>
-      <h2>Our Guest</h2>
+      <h2>Our Guests!</h2>
       <GuestGrid>
         {guestData.map((member) => (
           <GuestMember
