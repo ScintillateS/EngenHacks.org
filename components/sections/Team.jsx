@@ -78,7 +78,7 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
         </a>
       </TeamMemberImage>
       <h3>
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           {name}
         </a>
       </h3>
