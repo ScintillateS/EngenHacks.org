@@ -39,8 +39,11 @@ const LinksMobile = styled("div", ({
   width: "100%",
   display: "none",
   gap: "10px",
-  top: "60px",
+  top: "80px",
+  padding: "10px",
+  boxSizing: "border-box",
 }));
+
 
 const LogoDiv = styled("div", ({
   position: 'absolute',
@@ -59,6 +62,7 @@ const HamburgerWrapper = styled("div", ({
   position: 'absolute',
   right: '15px',
   top: '15px',
+
 }));
 
 export const Navbar = (props) => {
@@ -93,7 +97,7 @@ export const Navbar = (props) => {
         <LinksMobile id='mobile-links'>
           <Link href="#About" target="_self">About</Link>
           <Link href="#Sponsors" target="_self">Sponsors</Link>
-          <Link href="#Guest" target="_self">Guest</Link>
+          <Link href="#Guest" target="_self">Guests</Link>
           <Link href="#Team" target="_self">Team</Link>
           <Link href="#FAQ" target="_self">FAQ</Link>
         </LinksMobile>
