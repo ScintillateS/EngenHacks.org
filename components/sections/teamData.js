@@ -39,7 +39,7 @@ const teamData = [
     year: "Senior",
     experience: "3 years",
     link: "https://person4.com/",
-  }
+  },
 
   {
     id: 5,
@@ -49,7 +49,7 @@ const teamData = [
     year: "Senior",
     experience: "3 years",
     link: "https://person5.com/",
-  }
+  },
 
   {
     id: 6,
@@ -60,7 +60,7 @@ const teamData = [
     experience: "3 years",
     link: "https://person6.com/",
   }
-  
+
 ];
 
 export default teamData;
