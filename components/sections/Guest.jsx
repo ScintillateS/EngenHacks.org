@@ -26,12 +26,12 @@ const GuestGrid = styled('div', css({
   padding: '50px',
 }));
 
-const TeamMemberContainer = styled('div', {
+const GuestMemberContainer = styled('div', {
   textAlign: 'center',
   marginBottom: '2rem',
 });
 
-const TeamMemberImage = styled('div', {
+const GuestMemberImage = styled('div', {
   position: 'relative',
   cursor: 'pointer',
   marginLeft: 'auto',
@@ -73,12 +73,12 @@ const LearnMoreButton = styled('a', {
 
 
 
-const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
+const GuestMember = ({ name, role, img, highSchoolYear, experience, link }) => {
   return (
-    <TeamMemberContainer>
-      <TeamMemberImage>
+    <GuestMemberContainer>
+      <GuestMemberImage>
         <Image src={img} alt={name} width={200} height={200} />
-      </TeamMemberImage>
+      </GuestMemberImage>
       <h3>{name}</h3>
       <p>{role}</p>
       <LearnMoreButton href={link} target="_blank" rel="noopener noreferrer">
@@ -87,30 +87,30 @@ const TeamMember = ({ name, role, img, highSchoolYear, experience, link }) => {
           {link}
         </a>
       </LearnMoreButton>
-    </TeamMemberContainer>
+    </GuestMemberContainer>
   );
 };
 
 
-const Team = () => {
+const Guest = () => {
   return (
     <Wrapper>
-      <h2>Our Team</h2>
-      <TeamGrid>
-        {teamData.map((member) => (
-          <TeamMember
+      <h2>Our Guest</h2>
+      <GuestGrid>
+        {GuestData.map((member) => (
+          <GuestMember
             key={member.id}
             name={member.name}
             role={member.role}
             img={member.image}
             highSchoolYear={member.highSchoolYear}
             experience={member.experience}
-            link={member.link} // Pass the "link" property to the TeamMember component
+            link={member.link} // Pass the "link" property to the GuestMember component
           />
         ))}
-      </TeamGrid>
+      </GuestGrid>
     </Wrapper>
   );
 };
 
-export default Team;
+export default Guest;
