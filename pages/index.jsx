@@ -7,6 +7,7 @@ import FAQ from '@components/sections/FAQ/FAQ';
 import { BrowserView } from 'react-device-detect';
 import Stats from '@components/sections/Stats';
 import Team from '@components/sections/Team';
+import Guest from '@components/sections/Guest';
 
 
 
@@ -59,6 +60,7 @@ export default function Home() {
             {/* <Stats /> */}
             <Sponsors />
             <Team />
+            <Guest />
             <FAQ/>
         </Layout>
       </MainBackground>
