@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Engen Hacks Signup</title>
+</head>
+<body>
+    <h1>Engen Hacks Signup Form</h1>
+    <form id="signup-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById('signup-form');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+
+            const name = nameInput.value;
+            const email = emailInput.value;
+
+            // Need to use formspree
+            form.action = "https://formspree.io/f/your-formspree-id";
+            form.method = "POST";
+            form.submit();
+
+            window.location.href = "app.jsx";
+        });
+    </script>
+</body>
+</html>
